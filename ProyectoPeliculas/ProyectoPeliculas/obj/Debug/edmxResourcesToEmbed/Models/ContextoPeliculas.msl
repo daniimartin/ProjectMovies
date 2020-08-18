@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PeliculasModelStoreContainer" CdmEntityContainer="PeliculasEntities">
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="PeliculasModel.Clientes">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CPostal" ColumnName="CPostal" />
+          <ScalarProperty Name="PaginaWeb" ColumnName="PaginaWeb" />
+          <ScalarProperty Name="Imagen_Cliente" ColumnName="Imagen_Cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Distribuidoras">
+      <EntityTypeMapping TypeName="PeliculasModel.Distribuidoras">
+        <MappingFragment StoreEntitySet="Distribuidoras">
+          <ScalarProperty Name="IdDistribuidor" ColumnName="IdDistribuidor" />
+          <ScalarProperty Name="Distribuidor" ColumnName="Distribuidor" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PaginaWeb" ColumnName="PaginaWeb" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Generos">
+      <EntityTypeMapping TypeName="PeliculasModel.Generos">
+        <MappingFragment StoreEntitySet="Generos">
+          <ScalarProperty Name="IdGenero" ColumnName="IdGenero" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nacionalidad">
+      <EntityTypeMapping TypeName="PeliculasModel.Nacionalidad">
+        <MappingFragment StoreEntitySet="Nacionalidad">
+          <ScalarProperty Name="IdNacionalidad" ColumnName="IdNacionalidad" />
+          <ScalarProperty Name="Nacionalidad1" ColumnName="Nacionalidad" />
+          <ScalarProperty Name="Bandera" ColumnName="Bandera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Peliculas">
+      <EntityTypeMapping TypeName="PeliculasModel.Peliculas">
+        <MappingFragment StoreEntitySet="Peliculas">
+          <ScalarProperty Name="IdPelicula" ColumnName="IdPelicula" />
+          <ScalarProperty Name="IdDistribuidor" ColumnName="IdDistribuidor" />
+          <ScalarProperty Name="IdGenero" ColumnName="IdGenero" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdNacionalidad" ColumnName="IdNacionalidad" />
+          <ScalarProperty Name="Argumento" ColumnName="Argumento" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="Fecha_Estreno" ColumnName="Fecha_Estreno" />
+          <ScalarProperty Name="Actores" ColumnName="Actores" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="Duracion" ColumnName="Duracion" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="YouTube" ColumnName="YouTube" />
+          <ScalarProperty Name="EnlaceVideo" ColumnName="EnlaceVideo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PeliculasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CPostal" Type="Int32" />
+    <Property Name="PaginaWeb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Imagen_Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Distribuidoras">
+    <Key>
+      <PropertyRef Name="IdDistribuidor" />
+    </Key>
+    <Property Name="IdDistribuidor" Type="Int32" Nullable="false" />
+    <Property Name="Distribuidor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PaginaWeb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono" Type="Int32" />
+    <Property Name="Contacto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Logo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Generos">
+    <Key>
+      <PropertyRef Name="IdGenero" />
+    </Key>
+    <Property Name="IdGenero" Type="Int32" Nullable="false" />
+    <Property Name="Genero" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Nacionalidad">
+    <Key>
+      <PropertyRef Name="IdNacionalidad" />
+    </Key>
+    <Property Name="IdNacionalidad" Type="Int32" Nullable="false" />
+    <Property Name="Nacionalidad1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bandera" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Peliculas">
+    <Key>
+      <PropertyRef Name="IdPelicula" />
+    </Key>
+    <Property Name="IdPelicula" Type="Int32" Nullable="false" />
+    <Property Name="IdDistribuidor" Type="Int32" />
+    <Property Name="IdGenero" Type="Int32" />
+    <Property Name="Titulo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IdNacionalidad" Type="Int32" />
+    <Property Name="Argumento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Foto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha_Estreno" Type="DateTime" Precision="3" />
+    <Property Name="Actores" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Director" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Duracion" Type="Int32" />
+    <Property Name="Precio" Type="Int16" />
+    <Property Name="YouTube" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EnlaceVideo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="PeliculasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" />
+    <EntitySet Name="Distribuidoras" EntityType="Self.Distribuidoras" />
+    <EntitySet Name="Generos" EntityType="Self.Generos" />
+    <EntitySet Name="Nacionalidad" EntityType="Self.Nacionalidad" />
+    <EntitySet Name="Peliculas" EntityType="Self.Peliculas" />
+  </EntityContainer>
+</Schema>
